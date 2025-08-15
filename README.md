@@ -1,16 +1,78 @@
-# weather_app
+# 🌦 Weather App (Flutter + GetX)
 
-A new Flutter project.
+A modern weather application built with **Flutter** and **GetX** for state management.  
+Displays real-time weather information with a clean, modular architecture.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📂 Project Structure
 
-A few resources to get you started if this is your first Flutter project:
+lib/
+├── main.dart # App entry point
+├── app/
+│ ├── modules/ # Feature-based modules
+│ │ ├── home/ # Home module
+│ │ │ ├── controllers/ # GetX Controllers
+│ │ │ │ └── home_controller.dart
+│ │ │ ├── models/ # Data models
+│ │ │ │ └── weather_model.dart
+│ │ │ ├── views/ # UI screens
+│ │ │ │ └── home_view.dart
+│ │ │ ├── services/ # API / Data services
+│ │ │ │ └── weather_service.dart
+│ │ │ └── bindings/ # Dependency injection
+│ │ │ └── home_binding.dart
+│ │ 
+│ ├── routes/ # Navigation setup
+│ │ ├── app_pages.dart
+│ │ └── app_routes.dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🚀 Features
+
+- 🌍 Fetches live weather data via API
+- 📱 Responsive UI
+- ⚡ Fast state management with **GetX**
+- 🔗 Centralized navigation using named routes
+- 🧩 Modular architecture for scalability
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Flutter (Dart)
+- **State Management:** GetX
+- **API Calls:** `http` package (or Dio if implemented)
+- **Architecture:** Modular + MVVM-ish
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/Dyy-Coding/weather-app.git
+
+# Navigate to the project
+cd weather-app
+
+# Get dependencies
+flutter pub get
+
+▶️ Running the App
+flutter run
+
+⚙️ Configuration
+
+Get a free weather API key from OpenWeatherMap
+
+Create a .env file (or add in constants file)
+
+const String WEATHER_API_KEY = "YOUR_API_KEY";
+
+
+Update the API key in weather_service.
+
+
